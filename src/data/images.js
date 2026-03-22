@@ -1,0 +1,86 @@
+export const images = [
+  {
+    id: 1,
+    src: "/images/1.jpg",
+    title: "Samotna wieża",
+    location: "Olsztyn",
+    camera: "Nikon D3300",
+    lens: "55-200mm",
+    settings: "f/4.0 · 1/500s · ISO 100",
+    year: "2026",
+    description: "Wgląd na przeszłość przez zniszczone mury.",
+    collections: ["featured"]
+  },
+  {
+    id: 2,
+    src: "/images/photo2.jpg",
+    title: "Midnight Alley",
+    location: "Kraków, Poland",
+    camera: "Nikon D3300",
+    lens: "35mm",
+    settings: "f/5.6 · 1/125 · ISO 400",
+    year: "2025",
+    description: "Late night street atmosphere with soft city glow.",
+    collections: ["featured"]
+  },
+  {
+    id: 3,
+    src: "/images/photo3.jpg",
+    title: "Quiet Portrait",
+    location: "Częstochowa",
+    camera: "Nikon D3300",
+    lens: "50mm",
+    settings: "f/1.8 · 1/250 · ISO 200",
+    year: "2024",
+    description: "Natural light portrait with shallow depth of field.",
+    collections: ["featured"]
+  },
+  {
+    id: 4,
+    src: "/images/photo4.jpg",
+    title: "Concrete Geometry",
+    location: "Warsaw",
+    camera: "Nikon D3300",
+    lens: "18-55mm",
+    settings: "f/8 · 1/320 · ISO 100",
+    year: "2024",
+    description: "Minimal architecture and symmetry.",
+    collections: ["featured"]
+  },
+  {
+    id: 5,
+    src: "/images/photo5.jpg",
+    title: "Morning Mist",
+    location: "Bieszczady",
+    camera: "Nikon D3300",
+    lens: "55mm",
+    settings: "f/4 · 1/200 · ISO 100",
+    year: "2025",
+    description: "Soft morning light cutting through mountain fog.",
+    collections: ["featured"]
+  },
+  {
+    id: 6,
+    src: "/images/6.jpg",
+    title: "Urban Silence",
+    location: "Paris",
+    camera: "Nikon D3300",
+    lens: "35mm",
+    settings: "f/5 · 1/160 · ISO 320",
+    year: "2023",
+    description: "Minimalistic urban composition in black & white.",
+    collections: ["featured"]
+  },
+  {
+    id: 7,
+    src: "/images/7.jpg",
+    title: "Still Water",
+    location: "Mazury",
+    camera: "Nikon D3300",
+    lens: "18-55mm",
+    settings: "f/6.3 · 1/500 · ISO 100",
+    year: "2025",
+    description: "Reflections and silence before sunset.",
+    collections: ["featured"]
+  },
+];
