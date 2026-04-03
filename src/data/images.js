@@ -2,85 +2,148 @@ export const images = [
   {
     id: 1,
     src: "/images/1.jpg",
-    title: "Samotna wieża",
-    location: "Olsztyn",
+    title: {
+      pl: "Samotna wieża",
+      en: "Lone Tower"
+    },
+    location: {
+      pl: "Olsztyn, Polska",
+      en: "Olsztyn, Poland"
+    },
     camera: "Nikon D3300",
     lens: "55-200mm",
     settings: "f/4.0 · 1/500s · ISO 100",
     year: "2026",
-    description: "Wgląd na przeszłość przez zniszczone mury.",
+    description: {
+      pl: "Wgląd na przeszłość przez zniszczone mury.",
+      en: "A look into the past through ruined walls."
+    },
     collections: ["featured", "architektura"]
   },
   {
     id: 2,
     src: "/images/photo2.jpg",
-    title: "Midnight Alley",
-    location: "Kraków, Poland",
+    title: {
+      pl: "Nocna alejka",
+      en: "Midnight Alley"
+    },
+    location: {
+      pl: "Kraków, Polska",
+      en: "Krakow, Poland"
+    },
     camera: "Nikon D3300",
     lens: "35mm",
-    settings: "f/5.6 · 1/125 · ISO 400",
+    settings: "f/5.6 · 1/125s · ISO 400",
     year: "2025",
-    description: "Late night street atmosphere with soft city glow.",
+    description: {
+      pl: "Późnonocny klimat ulicy z miękką poświatą miasta.",
+      en: "Late-night street atmosphere with a soft city glow."
+    },
     collections: ["featured", "ulica"]
   },
   {
     id: 3,
     src: "/images/photo3.jpg",
-    title: "Quiet Portrait",
-    location: "Częstochowa",
+    title: {
+      pl: "Cichy portret",
+      en: "Quiet Portrait"
+    },
+    location: {
+      pl: "Częstochowa, Polska",
+      en: "Czestochowa, Poland"
+    },
     camera: "Nikon D3300",
     lens: "50mm",
     settings: "f/1.8 · 1/250 · ISO 200",
     year: "2024",
-    description: "Natural light portrait with shallow depth of field.",
+    description: {
+      pl: "Portret w naturalnym świetle z płytką głębią ostrości.",
+      en: "Natural-light portrait with a shallow depth of field."
+    },
     collections: ["featured", "portret"]
   },
   {
     id: 4,
     src: "/images/photo4.jpg",
-    title: "Concrete Geometry",
-    location: "Warsaw",
+    title: {
+      pl: "Betonowa geometria",
+      en: "Concrete Geometry"
+    },
+    location: {
+      pl: "Warszawa, Polska",
+      en: "Warsaw, Poland"
+    },
     camera: "Nikon D3300",
     lens: "18-55mm",
     settings: "f/8 · 1/320 · ISO 100",
     year: "2024",
-    description: "Minimal architecture and symmetry.",
+    description: {
+      pl: "Minimalistyczna architektura i symetria.",
+      en: "Minimal architecture and symmetry."
+    },
     collections: ["featured", "architektura"]
   },
   {
     id: 5,
     src: "/images/photo5.jpg",
-    title: "Morning Mist",
-    location: "Bieszczady",
+    title: {
+      pl: "Poranna mgła",
+      en: "Morning Mist"
+    },
+    location: {
+      pl: "Bieszczady, Polska",
+      en: "Bieszczady, Poland"
+    },
     camera: "Nikon D3300",
     lens: "55mm",
     settings: "f/4 · 1/200 · ISO 100",
     year: "2025",
-    description: "Soft morning light cutting through mountain fog.",
+    description: {
+      pl: "Miękkie poranne światło przecinające górską mgłę.",
+      en: "Soft morning light cutting through mountain fog."
+    },
     collections: ["featured", "natura"]
   },
   {
     id: 6,
     src: "/images/6.jpg",
-    title: "Urban Silence",
-    location: "Paris",
+    title: {
+      pl: "Miejska cisza",
+      en: "Urban Silence"
+    },
+    location: {
+      pl: "Paryż, Francja",
+      en: "Paris, France"
+    },
     camera: "Nikon D3300",
     lens: "35mm",
     settings: "f/5 · 1/160 · ISO 320",
     year: "2023",
-    description: "Minimalistic urban composition in black & white.",
+    description: {
+      pl: "Minimalistyczna miejska kompozycja w czerni i bieli.",
+      en: "Minimalistic urban composition in black and white."
+    },
     collections: ["featured", "ulica"]
   },
   {
     id: 7,
     src: "/images/7.jpg",
-    title: "Still Water",
-    location: "Mazury",
+    title: {
+      pl: "Nieruchoma woda",
+      en: "Still Water"
+    },
+    location: {
+      pl: "Mazury, Polska",
+      en: "Masuria, Poland"
+    },
     camera: "Nikon D3300",
     lens: "18-55mm",
     settings: "f/6.3 · 1/500 · ISO 100",
     year: "2025",
-    description: "Reflections and silence before sunset.",
+    description: {
+      pl: "Odbicia i cisza tuż przed zachodem słońca.",
+      en: "Reflections and silence just before sunset."
+    },
     collections: ["featured", "natura"]
   },
 ];

@@ -4,7 +4,12 @@ import ImageModal from "./ImageModal";
 import ImageCard from "./ImageCard";
 
 const Gallery = ({ lang = "pl" }) => {
-  const [selected, setSelected] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const localize = (value) => {
+    if (typeof value === "string") return value;
+    return value?.[lang] || value?.pl || value?.en || "";
+  };
+
   const featuredImages = useMemo(
     () =>
       [...images]
@@ -13,23 +18,46 @@ const Gallery = ({ lang = "pl" }) => {
     []
   );
 
+  const selectedImage =
+    selectedIndex === null ? null : featuredImages[selectedIndex];
+
+  const goNext = () => {
+    setSelectedIndex((current) => {
+      if (current === null) return current;
+      return (current + 1) % featuredImages.length;
+    });
+  };
+
+  const goPrev = () => {
+    setSelectedIndex((current) => {
+      if (current === null) return current;
+      return (current - 1 + featuredImages.length) % featuredImages.length;
+    });
+  };
+
   return (
     <>
       <section id="gallery" className="px-12 pb-24">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-10">
-          {featuredImages.map((image) => (
+          {featuredImages.map((image, index) => (
             <ImageCard
               key={image.id}
               src={image.src}
-              alt={image.title}
-              onClick={() => setSelected(image)}
+              alt={localize(image.title)}
+              onClick={() => setSelectedIndex(index)}
             />
           ))}
         </div>
       </section>
 
-      {selected && (
-        <ImageModal image={selected} onClose={() => setSelected(null)} lang={lang} />
+      {selectedImage && (
+        <ImageModal
+          image={selectedImage}
+          onClose={() => setSelectedIndex(null)}
+          onPrev={goPrev}
+          onNext={goNext}
+          lang={lang}
+        />
       )}
     </>
   );

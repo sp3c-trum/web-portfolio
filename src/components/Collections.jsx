@@ -6,9 +6,14 @@ import ImageCard from "./ImageCard";
 const preferredOrder = ["architektura", "ulica", "portret", "natura"];
 
 const Collections = ({ lang = "pl" }) => {
+  const localize = (value) => {
+    if (typeof value === "string") return value;
+    return value?.[lang] || value?.pl || value?.en || "";
+  };
+
   const copy = {
     pl: {
-      intro: "Collections",
+      intro: "Kolekcje",
       title: "Selekcje budowane wokół nastroju, miejsca i światła.",
       description:
         "Każda kolekcja grupuje fotografie według charakteru kadru. Wybierz temat i otwórz wybrane ujęcie, by zobaczyć szczegóły.",
@@ -63,12 +68,13 @@ const Collections = ({ lang = "pl" }) => {
   );
 
   const [selectedCollection, setSelectedCollection] = useState(collections[0] || null);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleChange = (col) => {
     if (col === selectedCollection) return;
 
+    setSelectedIndex(null);
     setIsAnimating(true);
 
     setTimeout(() => {
@@ -100,6 +106,25 @@ const Collections = ({ lang = "pl" }) => {
     ? (t.names[selectedCollection] || selectedCollection).charAt(0).toUpperCase() +
       (t.names[selectedCollection] || selectedCollection).slice(1)
     : t.intro;
+
+  const selectedImage =
+    selectedIndex === null || selectedIndex >= filteredImages.length
+      ? null
+      : filteredImages[selectedIndex];
+
+  const goNext = () => {
+    setSelectedIndex((current) => {
+      if (current === null) return current;
+      return (current + 1) % filteredImages.length;
+    });
+  };
+
+  const goPrev = () => {
+    setSelectedIndex((current) => {
+      if (current === null) return current;
+      return (current - 1 + filteredImages.length) % filteredImages.length;
+    });
+  };
 
   return (
     <>
@@ -168,17 +193,17 @@ const Collections = ({ lang = "pl" }) => {
                     isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
                   }`}
                 >
-                  {filteredImages.map((image) => (
+                  {filteredImages.map((image, index) => (
                     <ImageCard
                       key={image.id}
                       src={image.src}
-                      alt={image.title}
+                      alt={localize(image.title)}
                       className="mb-7"
-                      onClick={() => setSelectedImage(image)}
+                      onClick={() => setSelectedIndex(index)}
                       caption={(
                         <>
-                          <p className="text-white text-sm">{image.title}</p>
-                          <p className="text-zinc-300 text-xs mt-1">{image.location}</p>
+                          <p className="text-white text-sm">{localize(image.title)}</p>
+                          <p className="text-zinc-300 text-xs mt-1">{localize(image.location)}</p>
                         </>
                       )}
                     />
@@ -191,7 +216,13 @@ const Collections = ({ lang = "pl" }) => {
       </section>
 
       {selectedImage && (
-        <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} lang={lang} />
+        <ImageModal
+          image={selectedImage}
+          onClose={() => setSelectedIndex(null)}
+          onPrev={goPrev}
+          onNext={goNext}
+          lang={lang}
+        />
       )}
     </>
   );
