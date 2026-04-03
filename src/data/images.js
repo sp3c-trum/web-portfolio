@@ -9,7 +9,7 @@ export const images = [
     settings: "f/4.0 · 1/500s · ISO 100",
     year: "2026",
     description: "Wgląd na przeszłość przez zniszczone mury.",
-    collections: ["featured"]
+    collections: ["featured", "architektura"]
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const images = [
     settings: "f/5.6 · 1/125 · ISO 400",
     year: "2025",
     description: "Late night street atmosphere with soft city glow.",
-    collections: ["featured"]
+    collections: ["featured", "ulica"]
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const images = [
     settings: "f/1.8 · 1/250 · ISO 200",
     year: "2024",
     description: "Natural light portrait with shallow depth of field.",
-    collections: ["featured"]
+    collections: ["featured", "portret"]
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const images = [
     settings: "f/8 · 1/320 · ISO 100",
     year: "2024",
     description: "Minimal architecture and symmetry.",
-    collections: ["featured"]
+    collections: ["featured", "architektura"]
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const images = [
     settings: "f/4 · 1/200 · ISO 100",
     year: "2025",
     description: "Soft morning light cutting through mountain fog.",
-    collections: ["featured"]
+    collections: ["featured", "natura"]
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const images = [
     settings: "f/5 · 1/160 · ISO 320",
     year: "2023",
     description: "Minimalistic urban composition in black & white.",
-    collections: ["featured"]
+    collections: ["featured", "ulica"]
   },
   {
     id: 7,
@@ -81,6 +81,6 @@ export const images = [
     settings: "f/6.3 · 1/500 · ISO 100",
     year: "2025",
     description: "Reflections and silence before sunset.",
-    collections: ["featured"]
+    collections: ["featured", "natura"]
   },
 ];

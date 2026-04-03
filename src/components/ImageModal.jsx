@@ -1,25 +1,22 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
-const ImageModal = ({ image, onClose }) => {
-
-  const handleClose = () => {
-    onClose();
-  };
+const ImageModal = ({ image, onClose, lang = "pl" }) => {
+  const closeLabel = lang === "pl" ? "Zamknij" : "Close";
 
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === "Escape") handleClose();
+      if (e.key === "Escape") onClose();
     };
 
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, []);
+  }, [onClose]);
 
   return createPortal(
     <div
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] p-6 animate-fadeIn"
-      onClick={handleClose}
+      onClick={onClose}
     >
       <div
         className="relative flex max-h-[90vh] max-w-[95vw] bg-white rounded-3xl shadow-2xl overflow-hidden animate-scaleIn"
@@ -57,10 +54,10 @@ const ImageModal = ({ image, onClose }) => {
           </div>
 
           <button
-            onClick={handleClose}
+            onClick={onClose}
             className="text-xs text-gray-400 hover:text-black transition"
           >
-            Close
+            {closeLabel}
           </button>
         </div>
       </div>
