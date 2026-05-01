@@ -3,15 +3,15 @@ const Navbar = ({ setPage, currentPage, isDarkTheme, isWebTheme, lang, setLang }
   const labels = {
     pl: {
       home: "start",
-      gallery: "fotografia",
+      gallery: "foto",
       collections: "serie",
-      audio: "muzyka",
+      audio: "audio",
       websites: "strony",
       contact: "kontakt"
     },
     en: {
       home: "home",
-      gallery: "visual",
+      gallery: "photo",
       collections: "series",
       audio: "audio",
       websites: "web",

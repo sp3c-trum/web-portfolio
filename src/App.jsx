@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Gallery from "./components/Gallery";
-import Collections from "./components/Collections";
-import Contact from "./components/Contact";
-import Audio from "./components/Audio";
 import Footer from "./components/Footer";
-import Websites from "./components/Websites";
 import Home from "./components/Home";
+
+const Gallery = lazy(() => import("./components/Gallery"));
+const Collections = lazy(() => import("./components/Collections"));
+const Contact = lazy(() => import("./components/Contact"));
+const Audio = lazy(() => import("./components/Audio"));
+const Websites = lazy(() => import("./components/Websites"));
 
 function App() {
   const [page, setPage] = useState("home");
@@ -54,12 +55,14 @@ function App() {
             : "opacity-100 translate-y-0"
         }`}
       >
-        {displayPage === "home" && <Home lang={lang} setPage={setPage} />}
-        {displayPage === "gallery" && <Gallery lang={lang} />}
-        {displayPage === "audio" && <Audio lang={lang} />}
-        {displayPage === "websites" && <Websites lang={lang} setPage={setPage} />}
-        {displayPage === "collections" && <Collections lang={lang} />}
-        {displayPage === "contact" && <Contact isDarkTheme={isDarkTheme} lang={lang} />}
+        <Suspense fallback={null}>
+          {displayPage === "home" && <Home lang={lang} setPage={setPage} />}
+          {displayPage === "gallery" && <Gallery lang={lang} />}
+          {displayPage === "audio" && <Audio lang={lang} />}
+          {displayPage === "websites" && <Websites lang={lang} setPage={setPage} />}
+          {displayPage === "collections" && <Collections lang={lang} />}
+          {displayPage === "contact" && <Contact isDarkTheme={isDarkTheme} lang={lang} />}
+        </Suspense>
       </div>
 
       <Footer isDarkTheme={isDarkTheme} isWebTheme={isWebTheme} lang={lang} />
