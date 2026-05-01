@@ -11,12 +11,12 @@ const Footer = ({ isDarkTheme = false, isWebTheme = false, lang = "pl" }) => {
     pl: {
       tagline: "Kierunek kreatywny łączący obraz, dźwięk i doświadczenia webowe.",
       rights: "Wszelkie prawa zastrzeżone.",
-      summary: "Strefa kreatywna dla marek, twórców i projektów, które potrzebują charakteru."
+      summary: "Strefa kreatywna dla samego siebie oraz twórców i projektów, które potrzebują charakteru."
     },
     en: {
       tagline: "Creative direction combining visuals, sound, and web experiences.",
       rights: "All rights reserved.",
-      summary: "A creative outlet for brands, creators, and projects that need character."
+      summary: "A creative outlet for me, creators, and projects that need character."
     }
   };
   const t = copy[lang] || copy.pl;

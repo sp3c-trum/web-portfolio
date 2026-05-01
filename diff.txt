@@ -1,0 +1,58 @@
+diff --git a/diff.txt b/diff.txt
+new file mode 100644
+index 0000000..ee93e53
+--- /dev/null
++++ b/diff.txt
+@@ -0,0 +1,54 @@
++diff --git a/diff.txt b/diff.txt
++new file mode 100644
++index 0000000..8f887c0
++--- /dev/null
+++++ b/diff.txt
++@@ -0,0 +1,51 @@
+++diff --git a/diff.txt b/diff.txt
+++new file mode 100644
+++index 0000000..e70f06d
+++--- /dev/null
++++++ b/diff.txt
+++@@ -0,0 +1,13 @@
++++diff --git a/index.html b/index.html
++++index 83b3962..c5f3c61 100644
++++--- a/index.html
+++++++ b/index.html
++++@@ -4,7 +4,7 @@
++++     <meta charset="UTF-8" />
++++     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
++++     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++++-    <title>Mikołaj Koper</title>
+++++    <title>Test</title>
++++   </head>
++++   <body>
++++     <div id="root"></div>
+++diff --git a/index.html b/index.html
+++index 83b3962..c5f3c61 100644
+++--- a/index.html
++++++ b/index.html
+++@@ -4,7 +4,7 @@
+++     <meta charset="UTF-8" />
+++     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+++     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+++-    <title>Mikołaj Koper</title>
++++    <title>Test</title>
+++   </head>
+++   <body>
+++     <div id="root"></div>
+++diff --git a/src/components/Footer.jsx b/src/components/Footer.jsx
+++index 7a79d9a..25d8a70 100644
+++--- a/src/components/Footer.jsx
++++++ b/src/components/Footer.jsx
+++@@ -11,12 +11,12 @@ const Footer = ({ isDarkTheme = false, isWebTheme = false, lang = "pl" }) => {
+++     pl: {
+++       tagline: "Kierunek kreatywny łączący obraz, dźwięk i doświadczenia webowe.",
+++       rights: "Wszelkie prawa zastrzeżone.",
+++-      summary: "Strefa kreatywna dla marek, twórców i projektów, które potrzebują charakteru."
++++      summary: "Strefa kreatywna dla samego siebie oraz twórców i projektów, które potrzebują charakteru."
+++     },
+++     en: {
+++       tagline: "Creative direction combining visuals, sound, and web experiences.",
+++  
